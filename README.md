@@ -35,7 +35,7 @@ I'm a full stack Web developer...
 
 
 ## 🛠 Skills
-Python, Django, Postgresql, Javascript, HTML, CSS, Bootstrap...
+Python, Django, Postgresql, Javascript, HTML, CSS, Bootstrap 5
 
 
 ## Authors
