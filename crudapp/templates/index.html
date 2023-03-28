@@ -30,6 +30,7 @@
           <h2>Registration Form (CRUD Operations)</h2>
 
             <form method="post" action="{% url 'registration' %}" role="form" enctype="multipart/form-data">
+
               {% csrf_token %} 
               {{ form.as_p }}
     
