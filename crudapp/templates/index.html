@@ -29,7 +29,8 @@
         <div class="section border border-primary p-4 text-center m-auto">
           <h2>Registration Form (CRUD Operations)</h2>
 
-            <form method="post" action="{% url 'registration' %}" role="form" enctype="multipart/form-data">
+            <form method="post" action="" role="form" enctype="multipart/form-data">
+
               {% csrf_token %} 
               {{ form.as_p }}
     
