@@ -48,23 +48,23 @@
             </thead>
             <tbody>
               
-              {% for registration in registrations %}
+              {% for i in registrations %}
                   <tr>
-                    <td>{{ registration.id }}</td>
-                    <td>{{ registration.name }}</td>
-                    <td>{{ registration.address }}</td>
-                    <td>{{ registration.phone }}</td>
+                    <td>{{ i.id }}</td>
+                    <td>{{ i.name }}</td>
+                    <td>{{ i.address }}</td>
+                    <td>{{ i.phone }}</td>
 
                     <td style="width: 20%;text-align: center;">
-                      <img src="{{registration.profileimage.url}}" alt="image" class="prod-size d-block mx-auto" style="width: 50%; height: 50%;"> 
-                      <a href="http://127.0.0.1:8000/media/{{registration.profileimage}}"> {{registration.profileimage}} </a> 
+                      <img src="{{i.profileimage.url}}" alt="image" class="prod-size d-block mx-auto" style="width: 50%; height: 50%;"> 
+                      <a href="http://127.0.0.1:8000/media/{{i.profileimage}}"> {{i.profileimage}} </a> 
                     </td>
 
 
-                    <td><a href="{% url 'update' registration.id %}"> <button type="button" class="btn btn-success">Update</button></a></td>
+                    <td><a href="{% url 'update' i.id %}"> <button type="button" class="btn btn-success">Update</button></a></td>
 
                 
-                    <td> <a onclick="return confirm('Are you sure you want to delete this?')" href="{% url 'delete' registration.id %}"> <button type="button" class="btn btn-danger">Delete</button></a></td>
+                    <td> <a onclick="return confirm('Are you sure you want to delete this?')" href="{% url 'delete' i.id %}"> <button type="button" class="btn btn-danger">Delete</button></a></td>
                   </tr>
               {% endfor %}
               

@@ -16,7 +16,7 @@ def EmployeeRegistrationForm(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Data saved successfully!')
-            return redirect('registration')
+            return redirect('registration_list')
     else:
         form = EmployeeForm()
     return render(request, 'index.html', {'form': form})

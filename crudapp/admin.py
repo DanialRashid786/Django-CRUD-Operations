@@ -5,4 +5,4 @@ from .models import *
 
 class EmployeeRegistration(admin.ModelAdmin):
     list_display=('id','name','address','phone','profileimage')
-admin.site.register(registration, EmployeeRegistration) 
+admin.site.register(registration, EmployeeRegistration)

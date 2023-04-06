@@ -10,6 +10,7 @@ class registration(models.Model):
     address=models.CharField(max_length=50)
     phone=models.CharField(max_length=50)
     profileimage = models.ImageField(upload_to='employee/',max_length=200)
+    
 
     
     def __str__(self):
