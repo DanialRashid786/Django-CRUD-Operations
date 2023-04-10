@@ -8,13 +8,25 @@ from django.db import models
 class registration(models.Model):
     name=models.CharField(max_length=50)
     address=models.CharField(max_length=50)
-    phone=models.CharField(max_length=50)
+    email=models.EmailField(null=True)
+    phone=models.CharField(max_length=50,verbose_name='Pnone No')
+    scholarship=models.BooleanField(default=False, null=True, blank=True, verbose_name='scholarship', help_text='Any Scholarship')
+    Departmentlist = [
+        ('Computer Science', 'Computer Science'),
+        ('Management Science', 'Management Science'),
+        ('Mechanical Engineering', 'Mechanical Engineering')
+    ]
+    Department = models.CharField(choices=Departmentlist, max_length=50)
     profileimage = models.ImageField(upload_to='employee/',max_length=200)
     
 
     
     def __str__(self):
         return self.name
+    
+
+
+
     
 @receiver(pre_delete, sender=registration)    
 def delete_image(sender, instance, **kwargs):

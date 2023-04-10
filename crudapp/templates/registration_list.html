@@ -28,7 +28,7 @@
     <div class="container">
       <br /><br />
          
-        <div class="section border border-primary p-4 text-center m-auto">
+        <div class="section text-center m-auto">
           <h2>Employees List</h2>
           <a href="{% url 'registration' %}"> <button type="button" class="btn btn-success">Add New Employee</button></a>
 
@@ -40,7 +40,10 @@
                 <th scope="col">id</th>
                 <th scope="col">Name</th>
                 <th scope="col">Address</th>
+                <th scope="col">Email</th>
                 <th scope="col">Phone</th>
+                <th scope="col">scholarship</th>
+                <th scope="col">Department</th>
                 <th scope="col">profileimage</th>
                 <th scope="col">Update</th>
                 <th scope="col">Delete</th>
@@ -53,7 +56,10 @@
                     <td>{{ i.id }}</td>
                     <td>{{ i.name }}</td>
                     <td>{{ i.address }}</td>
+                    <td>{{ i.email }}</td>
                     <td>{{ i.phone }}</td>
+                    <td>{{ i.scholarship }}</td>
+                    <td>{{ i.Department }}</td>
 
                     <td style="width: 20%;text-align: center;">
                       <img src="{{i.profileimage.url}}" alt="image" class="prod-size d-block mx-auto" style="width: 50%; height: 50%;"> 
